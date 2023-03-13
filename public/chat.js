@@ -8,7 +8,7 @@ messageInput.addEventListener('keyup', (event) => {
       const messageElement = document.createElement('div');
       messageElement.classList.add('message');
       messageElement.classList.add('sent-message');
-      messageElement.innerText = "Yo: " + message;
+      messageElement.innerHTML = "<b>Yo: </b>" + message;
       messagesContainer.appendChild(messageElement);
       messagesContainer.scrollTop = messagesContainer.scrollHeight;
       messageInput.value = '';
@@ -20,10 +20,10 @@ messageInput.addEventListener('keyup', (event) => {
         gpt = data.mensaje.trim();
         if (gpt !== '') {
           console.log('GPT');
-          const gptmessageElement = document.createElement('div');
+          let gptmessageElement = document.createElement('div');
           gptmessageElement.classList.add('message');
-          gptmessageElement.classList.add('sent-message');
-          gptmessageElement.innerText = "ChatGPT: " + gpt;
+          gptmessageElement.classList.add('sent-message-gpt');
+          gptmessageElement.innerHTML = `<strong class="text-gpt">ChatGPT: </strong> <b>` + gpt + '</b>';
           messagesContainer.appendChild(gptmessageElement);
           messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
