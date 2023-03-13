@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-commerce</title>
+        <!-- Enlace al archivo de estilos CSS -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Enlace al conjunto de iconos Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/c6c5f12735.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    </head>
+    <body>
+        <!-- Encabezado de la página que incluye el nombre del sitio web, opciones de navegación y un botón de carrito de compras -->
+        <nav>
+            <nav class="logo">
+                <img src="img/empresa.png" alt="Logo de mi empresa">
+                <h1>E-commerce</h1>
+            </nav>
+                
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="chat.html">Asistente virtual</a></li>
+            </ul>
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cantidad-carrito">0</span>
+            </button>
+        </nav>
+
+        <!-- Sección de "Productos en venta" que incluye una cabecera y una cuadrícula de productos -->
+        <section class="productos">
+            <h2>Productos destacados</h2>
+            <div class="grid-productos"></div>
+        </section>
+
+        <!-- Contenedor para el carrito de compras que incluye una tabla para mostrar los productos seleccionados, sus precios y una opción para eliminarlos -->
+        <div class="carrito active">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- Elemento para mostrar el total de la compra -->
+            <div class="total-carrito"></div>
+        </div>
+
+        <!-- Enlace al archivo de JavaScript -->
+        <script src="app.js"></script>
+        
+    </body>
+</html>
