@@ -1,28 +1,36 @@
 const productos = [
   {
       id: 1,
-      nombre: 'Cuaderno',
-      precio: 100,
+      nombre: 'Libro',
+      precio: 10,
       imagen:
           'img/book.png',
-      descripcion: "Esta es la descripción del producto 1"
+      descripcion: "'Fuerzas invisibles' es un thriller apasionante que le mantendrá en vilo de principio a fin. Cuando una serie de sucesos inexplicables ocurren en una pequeña ciudad, un grupo de héroes improbables debe unirse para descubrir la verdad que se esconde tras las misteriosas fuerzas en juego. Con giros inesperados y acción trepidante, este libro es una lectura obligada para cualquiera que ame un buen misterio con un toque sobrenatural. No te pierdas este emocionante viaje."
   },
   {
       id: 2,
-      nombre: 'Producto 2',
+      nombre: 'Focos',
       precio: 200,
       imagen:
           'img/light.png',
-      descripcion: "Esta es la descripción del producto 2"
+      descripcion: "Presentamos nuestros nuevos focos LED: ¡el complemento perfecto para cualquier hogar o negocio! Con un diseño energético, estos focos le ayudarán a ahorrar dinero en la factura de la luz al tiempo que proporcionan una luz brillante y duradera. Además, su diseño elegante y moderno añadirá un toque de elegancia a cualquier espacio. Tanto si busca resaltar obras de arte como crear un ambiente acogedor, nuestros focos LED son la solución perfecta. No pierda esta oportunidad de actualizar su iluminación y ahorrar dinero en el proceso."
   },
   {
       id: 3,
-      nombre: 'Producto 3',
-      precio: 300,
+      nombre: 'Ordenador',
+      precio: 500,
       imagen:
           'img/pc.png',
-      descripcion: "Esta es la descripción del producto 3"
+      descripcion: "Presentamos nuestro nuevo PC de última generación: la máquina definitiva para todas sus necesidades informáticas. Con velocidades de procesamiento ultrarrápidas, gráficos de alta calidad y un disco duro espacioso, este PC podrá con todo, desde los juegos hasta la edición de vídeo profesional. Además, su diseño elegante y moderno lo convertirá en un elegante complemento para cualquier escritorio. Ya sea un jugador, un estudiante o un profesional, nuestro nuevo PC es la elección perfecta para cualquiera que busque rendimiento y fiabilidad de primera línea. Actualice hoy mismo su experiencia informática con nuestro nuevo PC."
   },
+  {
+    id: 4,
+    nombre: 'Consola',
+    precio: 350,
+    imagen:
+        'img/console.png',
+    descripcion: "Presentamos la videoconsola más avanzada del mercado: ¡nuestra flamante consola cambia las reglas del juego! Con impresionantes gráficos 8K, velocidades de procesamiento ultrarrápidas y una biblioteca de juegos sin igual, esta consola te transportará a nuevos mundos y te proporcionará interminables horas de entretenimiento. Su diseño elegante y moderno la convertirá en la pieza central de tu centro de entretenimiento, y su interfaz fácil de usar hará que navegar por los juegos y las aplicaciones sea coser y cantar. or-hard enthusiast, nuestra nueva consola es la elección definitiva para cualquiera que busque llevar su experiencia de juego al siguiente nivel. ¿Por qué conformarse con menos? Pásate al futuro de los juegos con nuestra videoconsola de última generación hoy mismo."
+},
 ];
 
 const cartBtn = document.querySelector(".cart-btn");
@@ -80,7 +88,7 @@ carrito.forEach((producto) => {
 });
 
 const total = carrito.reduce((total, producto) => total + producto.precio, 0);
-totalCarritoEl.innerText = `Total a pagar: ${total}€`;
+totalCarritoEl.innerText = `Total a pagar: ${total}`;
 }
 
 function eliminarDelCarrito(id) {
@@ -116,23 +124,3 @@ productos.forEach((producto) => {
 }
 
 inicializarProductos();
-
-const url = "data.json";
-const container = document.getElementById("productos");
-
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(producto => {
-      const divProducto = document.createElement("div");
-      divProducto.classList.add("producto");
-      divProducto.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <p>${producto.descripcion}</p>
-        <span class="precio">${producto.precio} €</span>
-      `;
-      container.appendChild(divProducto);
-    });
-  })
-  .catch(error => console.log(error));

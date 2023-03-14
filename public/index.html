@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>E-commerce</title>
+        <title>Inicio</title>
         <!-- Enlace al archivo de estilos CSS -->
         <link rel="stylesheet" href="styles.css" />
         <!-- Enlace al conjunto de iconos Font Awesome -->
@@ -11,15 +11,14 @@
             src="https://kit.fontawesome.com/c6c5f12735.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script src="https://kit.fontawesome.com/3eae224327.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Encabezado de la página que incluye el nombre del sitio web, opciones de navegación y un botón de carrito de compras -->
         <nav>
             <nav class="logo">
                 <img src="img/empresa.png" alt="Logo de mi empresa">
-                <h1>E-commerce</h1>
+                <h1>TechZone</h1>
             </nav>
                 
             <ul class="nav-links">
@@ -27,32 +26,18 @@
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="chat.html">Asistente virtual</a></li>
             </ul>
-            <button class="cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cantidad-carrito">0</span>
-            </button>
         </nav>
 
-        <!-- Sección de "Productos en venta" que incluye una cabecera y una cuadrícula de productos -->
-        <section class="productos">
-            <h2>Productos destacados</h2>
-            <div class="grid-productos"></div>
-        </section>
+
+        <div class="description">
+            <h2>Bienvenido a TechZone</h2>
+            <p>Tu tienda de referencia para los últimos y mejores productos y libros de tecnología. Nuestra tienda en línea cuenta con una amplia colección de aparatos de última generación, como smartphones, portátiles, tabletas, consolas de videojuegos y mucho más. También ofrecemos una amplia variedad de libros sobre diversos temas, como tecnología, negocios y autoayuda.</p>
+            <p>En TechZone entendemos que la compra de productos tecnológicos puede resultar abrumadora, por lo que ofrecemos un servicio de atención al cliente excepcional para guiarle en el proceso de compra. Nuestros expertos y amables asesores le ayudarán a tomar una decisión de compra acertada.</p>
+            <p>Gracias a nuestro sitio Web fácil de usar, puede navegar por nuestro amplio inventario, comparar productos y realizar compras con sólo unos clics. Ofrecemos envíos rápidos y fiables, para que pueda disfrutar de sus nuevos gadgets y libros en un abrir y cerrar de ojos.</p>
+            <p>Tanto si eres un entusiasta de la tecnología como un ratón de biblioteca, TechZone tiene todo lo que necesitas para estar a la última. Compre con nosotros hoy mismo y experimente lo último en servicio al cliente y satisfacción.</p>
+          </div>
 
         <!-- Contenedor para el carrito de compras que incluye una tabla para mostrar los productos seleccionados, sus precios y una opción para eliminarlos -->
-        <div class="carrito active">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-            <!-- Elemento para mostrar el total de la compra -->
-            <div class="total-carrito"></div>
-        </div>
 
         <!-- Enlace al archivo de JavaScript -->
         <script src="app.js"></script>
