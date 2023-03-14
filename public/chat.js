@@ -23,7 +23,7 @@ messageInput.addEventListener('keyup', (event) => {
           let gptmessageElement = document.createElement('div');
           gptmessageElement.classList.add('message');
           gptmessageElement.classList.add('sent-message-gpt');
-          gptmessageElement.innerHTML = `<strong class="text-gpt">ChatGPT: </strong> <b>` + gpt + '</b>';
+          gptmessageElement.innerHTML = `<strong class="text-gpt">TechZoneBOT: </strong> <b>` + gpt + '</b>';
           messagesContainer.appendChild(gptmessageElement);
           messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
