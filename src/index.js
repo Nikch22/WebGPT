@@ -1,4 +1,6 @@
-const express = require('express')
+
+import chatbotGPT from './openaiAPI.js';
+import express from 'express'
 const app = express()
 
 app.use((req, res, next) => {
@@ -16,3 +18,6 @@ app.get('/mensaje', (req, res) => {
 app.listen(3000, () => {
 console.log('Servidor escuchando en el puerto 3000')
 })
+
+// Llama a la función chatbot
+chatbotGPT();
