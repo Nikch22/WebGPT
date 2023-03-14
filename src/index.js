@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.get('/mensaje', (req, res) => {
+app.get('/chatbot', (req, res) => {
   const mensaje = { mensaje: 'Hola, espero que tengas un buen día, en que puedo ayudarte?' }
   res.json(mensaje)
 })

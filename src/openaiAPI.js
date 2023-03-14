@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 // Importa el paquete openai-node
 import OpenAI from 'openai';
 
@@ -7,7 +9,7 @@ export default async function chatbotGPT() {
 const { Configuration, OpenAIApi } = OpenAI;
 
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: process.env.OPENAI_API_KEY.toString(),
 });
 const openai = new OpenAIApi(configuration);
 
