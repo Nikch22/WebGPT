@@ -261,7 +261,7 @@
 
   /* Chat Styles */
   #chat {
-    height: 89vh;
+    height: 81vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
