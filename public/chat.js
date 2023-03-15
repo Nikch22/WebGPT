@@ -12,23 +12,31 @@ messageInput.addEventListener('keyup', (event) => {
       messagesContainer.appendChild(messageElement);
       messagesContainer.scrollTop = messagesContainer.scrollHeight;
       messageInput.value = '';
-    }
+    
     let gpt = '';
-    fetch('http://localhost:3000/mensaje')
+    console.log(message);
+    fetch('http://localhost:3000/chatbot', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({msg: message}) // el mensaje de parámetro que quieres enviar
+      })
       .then(response => response.json())
       .then(data => {
-        gpt = data.mensaje.trim();
+        gpt = data.mensaje;
         if (gpt !== '') {
-          console.log('GPT');
+          console.log('GPT say...');
           let gptmessageElement = document.createElement('div');
           gptmessageElement.classList.add('message');
           gptmessageElement.classList.add('sent-message-gpt');
-          gptmessageElement.innerHTML = `<strong class="text-gpt">ChatGPT: </strong> <b>` + gpt + '</b>';
+          gptmessageElement.innerHTML = `<strong class="text-gpt">TechZoneBOT: </strong> <b>` + gpt + '</b>';
           messagesContainer.appendChild(gptmessageElement);
           messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
       })
       .catch(error => console.error(error));
+    }
     
 
   }

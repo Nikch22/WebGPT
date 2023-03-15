@@ -45,7 +45,7 @@
       padding: 20px;
       color: #fff;
       text-decoration: none;
-      font-size: 2em;
+      font-size: 3em;
     }
 
   nav ul li a:hover {
@@ -57,13 +57,9 @@
   background-color: #ff8c00;
   }
   
-  nav ul li a:hover {
+  nav ul li:first-child a:hover {
   background-color: #ffaf5f;
   } 
-
-  nav ul li:last-child {
-    margin-right: 9.2rem;
-  }
 
   .cart-btn {
     padding: 1em 1em;
@@ -153,11 +149,11 @@
   
   .carrito {
   position: fixed;
-  top: 10rem;
+  top: 4rem;
   right: -100%;
   background-color: #fff;
   width: 20rem;
-  height: 80%;
+  height: 100%;
   z-index: 1000;
   transition: right 0.5s ease-in-out;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -217,8 +213,7 @@
   
   .grid-productos {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-  margin-right: 20rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem;
   }
@@ -361,38 +356,8 @@
 .product p {
   font-size: 1rem;
   margin-bottom: 5px;
-  line-height: 1.5;
-  color: #666666;
-  text-align: justify;
-  margin-bottom: 20px;
 }
 
 .product p:last-child {
   font-weight: bold;
-}
-
-.description h1{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  margin-left: 3%;
-  margin-right: 55%;
-}
-
-.description p{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
-  margin-left: 3%;
-  margin-right: 55%;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666666;
-  text-align: justify;
-  margin-bottom: 20px;
 }
