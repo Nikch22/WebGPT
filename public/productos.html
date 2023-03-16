@@ -3,82 +3,37 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>E-commerce</title>
+        <title>Productos</title>
         <!-- Enlace al archivo de estilos CSS -->
         <link rel="stylesheet" href="styles.css" />
         <!-- Enlace al conjunto de iconos Font Awesome -->
-        <script
-            src="https://kit.fontawesome.com/c6c5f12735.js"
-            crossorigin="anonymous"
-        ></script>
+		<script src="https://kit.fontawesome.com/3eae224327.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <h1>E-commerce</h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-        </ul>
-        <button class="cart-btn">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cantidad-carrito">0</span>
-        </button>
-    </nav>
+		<nav class="logo">
+			<img src="img/empresa.png" alt="Logo de mi empresa">
+			<h1>TechZone</h1>
+		</nav>
+			
+		<ul class="nav-links">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="productos.html">Productos</a></li>
+			<li><a href="chat.html">Asistente virtual</a></li>
+		</ul>
+		<button class="cart-btn">
+			<div>
+				<i class="fa-solid fa-cart-shopping"></i>
+			</div>
+			<span class="cantidad-carrito">0</span>
+		</button>
+	</nav>
 
     <!-- Sección de "Productos en venta" que incluye una cabecera y una cuadrícula de productos -->
-    <div class="product-container">
-		<div class="product">
-			<img src="img/book.png" alt="Libro">
-			<h2>Libro</h2>
-			<p>Es un Libro.</p>
-			<p>$20.00</p>
-		</div>
-		
-		<div class="product">
-			<img src="img/light.png" alt="Focos">
-			<h2>Focos</h2>
-			<p>Los mejores focos del mercado para tus sesiones fotográficas.</p>
-			<p>$200.00</p>
-		</div>
-		
-		<div class="product">
-			<img src="img/pc.png" alt="Ordenador Personal">
-			<h2>Ordenador</h2>
-			<p>El mejor ordenador relación calidad-precio del mercado.</p>
-			<p>$499.00</p>
-		</div>
-		
-		<div class="product">
-			<img src="img/console.png" alt="Consola">
-			<h2>Consola</h2>
-			<p>La mejor Consola del mercado.</p>
-			<p>$750.00</p>
-		</div>
-
-        <div class="product">
-			<img src="product1.jpg" alt="Producto 1">
-			<h2>Producto 1</h2>
-			<p>Descripción breve del producto 1.</p>
-			<p>$10.00</p>
-		</div>
-		
-		<div class="product">
-			<img src="product2.jpg" alt="Producto 2">
-			<h2>Producto 2</h2>
-			<p>Descripción breve del producto 2.</p>
-			<p>$15.00</p>
-		</div>
-		
-		<div class="product">
-			<img src="product10.jpg" alt="Producto 10">
-			<h2>Producto 10</h2>
-			<p>Descripción breve del producto 10.</p>
-			<p>$50.00</p>
-		</div>
-	</div>
-
+	<section class="productos">
+		<h2>Productos en venta</h2>
+		<div class="grid-productos"></div>
+	</section>
     <!-- Contenedor para el carrito de compras que incluye una tabla para mostrar los productos seleccionados, sus precios y una opción para eliminarlos -->
     <div class="carrito active">
         <table>
@@ -86,7 +41,6 @@
                 <tr>
                     <th>Producto</th>
                     <th>Precio</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -117,31 +71,6 @@
       </footer> 
     <!-- Enlace al archivo de JavaScript -->
     <script src="app.js"></script>
-    
-	
-	<style>
-		.product-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			padding: 20px;
-			background-color: #f7f7f7;
-		}
-		
-		.product {
-			flex-basis: calc(100% / 5 - 20px);
-			margin-bottom: 20px;
-			background-color: #fff;
-			padding: 20px;
-			text-align: center;
-			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-		}
-		
-		.product img {
-			max-width: 100%;
-			margin-bottom: 10px;
-		}
-	</style>
+
 </body>
 </html>
